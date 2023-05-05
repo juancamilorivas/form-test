@@ -34,16 +34,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         flex-direction: column;
       }
 
       .contenedor-formulario {
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        padding: 15px;
       }
 
       .container-title {
@@ -80,7 +81,11 @@
         min-width: 375px;
         margin-top: 20px;
         height: auto;
-        padding: 15px;
+      }
+
+      .name-container{
+        display: flex;
+        flex-wrap: wrap;
       }
 
       .mitad1 {
@@ -277,12 +282,6 @@
     </style>
   </head>
   <body>
-    <img
-      class="image-banner"
-      src="https://user-images.githubusercontent.com/67404147/236311140-2a992557-6c06-4d8b-b17e-4f43264dec7a.jpg"
-      alt="texto_alternativo"
-    />
-
     <div class="main-container">
       <div class="contenedor-formulario">
         <!--FORMULARIO-->
@@ -291,56 +290,58 @@
           <div class="container-title">
             <p class="title fw-light">SUSCRIPCIÓN AL BOLETÍN</p>
             <p class="title-medium-commet">
-              Completa este formulario para suscribirte al boletín de La
-              Roche-Posay
+             Completa este formulario para conocer del proyecto Ecobot
             </p>
             <p class="title-small-comment">
               Los campos marcados con * son obligatorios
             </p>
           </div>
           <div class="form-container">
-            <div class="input-container mitad1">
-              <label for="nombre"></label>
-              <input
-                type="text"
-                id="first-name"
-                name="nombre"
-                placeholder="Nombre*"
-                class="label-font fst-italic"
-              />
-            </div>
 
-            <div class="input-container mitad1">
-              <label for="apellido"></label>
-              <input
-                type="text"
-                id="apellido"
-                name="last-name"
-                placeholder="Apellido*"
-                class="label-font fst-italic"
-              />
-            </div>
+            <div class="name-container">
+              <div class="input-container mitad1">
+                <label for="nombre"></label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="nombre"
+                  placeholder="Nombre*"
+                  class="label-font fst-italic"
+                />
+              </div>
 
-            <div class="input-container mitad2">
-              <label for="email"></label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Correo electrónico*"
-                class="label-font fst-italic"
-              />
-            </div>
+              <div class="input-container mitad1">
+                <label for="apellido"></label>
+                <input
+                  type="text"
+                  id="apellido"
+                  name="last-name"
+                  placeholder="Apellido*"
+                  class="label-font fst-italic"
+                />
+              </div>
 
-            <div class="input-container mitad2">
-              <label for="confirmar-email"></label>
-              <input
-                type="email"
-                id="confirmar-email"
-                name="confirmar-email"
-                placeholder="Confirmar correo electrónico*"
-                class="label-font fst-italic"
-              />
+              <div class="input-container mitad2">
+                <label for="email"></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Correo electrónico*"
+                  class="label-font fst-italic"
+                />
+              </div>
+
+              <div class="input-container mitad2">
+                <label for="confirmar-email"></label>
+                <input
+                  type="email"
+                  id="confirmar-email"
+                  name="confirmar-email"
+                  placeholder="Confirmar correo*"
+                  class="label-font fst-italic"
+                />
+              </div>
             </div>
 
             <div class="contenedor-fecha-tipo-telefono">
