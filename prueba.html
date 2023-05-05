@@ -30,6 +30,14 @@
         font-family: "Quicksand", sans-serif;
       }
 
+      .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+      }
+
       .contenedor-formulario {
         display: flex;
         flex-direction: column;
@@ -72,6 +80,7 @@
         min-width: 375px;
         margin-top: 20px;
         height: auto;
+        padding: 15px;
       }
 
       .mitad1 {
@@ -274,370 +283,371 @@
       alt="texto_alternativo"
     />
 
-    <div class="contenedor-formulario">
-      <!--FORMULARIO-->
-      <form>
-        <!--TITULOS-->
-        <div class="container-title">
-          <p class="title fw-light">SUSCRIPCIÓN AL BOLETÍN</p>
-          <p class="title-medium-commet">
-            Completa este formulario para suscribirte al boletín de La
-            Roche-Posay
-          </p>
-          <p class="title-small-comment">
-            Los campos marcados con * son obligatorios
-          </p>
-        </div>
-        <div class="form-container">
-          <div class="input-container mitad1">
-            <label for="nombre"></label>
-            <input
-              type="text"
-              id="first-name"
-              name="nombre"
-              placeholder="Nombre*"
-              class="label-font fst-italic"
-            />
-          </div>
-
-          <div class="input-container mitad1">
-            <label for="apellido"></label>
-            <input
-              type="text"
-              id="apellido"
-              name="last-name"
-              placeholder="Apellido*"
-              class="label-font fst-italic"
-            />
-          </div>
-
-          <div class="input-container mitad2">
-            <label for="email"></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Correo electrónico*"
-              class="label-font fst-italic"
-            />
-          </div>
-
-          <div class="input-container mitad2">
-            <label for="confirmar-email"></label>
-            <input
-              type="email"
-              id="confirmar-email"
-              name="confirmar-email"
-              placeholder="Confirmar correo electrónico*"
-              class="label-font fst-italic"
-            />
-          </div>
-
-          <div class="contenedor-fecha-tipo-telefono">
-            <!--FECHA DE NACIMIENTO-->
-            <div class="date-container">
-              <p class="text-date">FECHA DE NACIMIENTO*</p>
-              <div>
-                <select name="day-birthday" class="date-styles">
-                  <option value="" disabled selected>DD</option>
-                  <option value="value1">1</option>
-                  <option value="value2">2</option>
-                  <option value="value3">3</option>
-                  <option value="value4">4</option>
-                  <option value="value5">5</option>
-                  <option value="value6">6</option>
-                  <option value="value7">7</option>
-                  <option value="value8">8</option>
-                  <option value="value9">9</option>
-                  <option value="value10">10</option>
-                  <option value="value11">11</option>
-                  <option value="value12">12</option>
-                  <option value="value13">13</option>
-                  <option value="value14">14</option>
-                  <option value="value15">15</option>
-                  <option value="value16">16</option>
-                  <option value="value17">17</option>
-                  <option value="value18">18</option>
-                  <option value="value19">19</option>
-                  <option value="value20">20</option>
-                  <option value="value21">21</option>
-                  <option value="value22">22</option>
-                  <option value="value23">23</option>
-                  <option value="value24">24</option>
-                  <option value="value25">25</option>
-                  <option value="value26">26</option>
-                  <option value="value27">27</option>
-                  <option value="value28">28</option>
-                  <option value="value29">29</option>
-                  <option value="value30">30</option>
-                  <option value="value31">31</option>
-                </select>
-              </div>
-              <div>
-                <select name="month-birthday" class="date-styles">
-                  <option value="" disabled selected>MM</option>
-                  <option value="value1">1</option>
-                  <option value="value2">2</option>
-                  <option value="value4">4</option>
-                  <option value="value5">5</option>
-                  <option value="value1">6</option>
-                  <option value="value2">7</option>
-                  <option value="value4">8</option>
-                  <option value="value5">9</option>
-                  <option value="value2">10</option>
-                  <option value="value4">11</option>
-                  <option value="value5">12</option>
-                </select>
-              </div>
-              <div>
-                <select name="year-birthday" class="date-styles">
-                  <option value="" disabled selected>AAAA</option>
-                  <option value="value1">2023</option>
-                  <option value="value2">2022</option>
-                  <option value="value3">2021</option>
-                  <option value="value4">2020</option>
-                  <option value="value5">2019</option>
-                  <option value="value6">2018</option>
-                  <option value="value7">2017</option>
-                  <option value="value8">2016</option>
-                  <option value="value9">2015</option>
-                  <option value="value10">2014</option>
-                  <option value="value11">2013</option>
-                  <option value="value12">2012</option>
-                  <option value="value13">2011</option>
-                  <option value="value14">2010</option>
-                  <option value="value15">2009</option>
-                  <option value="value16">2008</option>
-                  <option value="value17">2007</option>
-                  <option value="value18">2006</option>
-                  <option value="value19">2005</option>
-                  <option value="value20">2004</option>
-                  <option value="value21">2003</option>
-                  <option value="value22">2002</option>
-                  <option value="value23">2001</option>
-                  <option value="value24">2000</option>
-                  <option value="value25">1999</option>
-                  <option value="value26">1998</option>
-                  <option value="value27">1997</option>
-                  <option value="value28">1996</option>
-                  <option value="value29">1995</option>
-                  <option value="value30">1994</option>
-                  <option value="value31">1993</option>
-                  <option value="value32">1992</option>
-                  <option value="value33">1991</option>
-                  <option value="value34">1990</option>
-                  <option value="value35">1989</option>
-                  <option value="value36">1988</option>
-                  <option value="value37">1987</option>
-                  <option value="value38">1986</option>
-                  <option value="value39">1985</option>
-                  <option value="value40">1984</option>
-                  <option value="value41">1983</option>
-                  <option value="value42">1982</option>
-                  <option value="value43">1981</option>
-                  <option value="value44">1980</option>
-                  <option value="value45">1979</option>
-                  <option value="value46">1978</option>
-                  <option value="value47">1977</option>
-                  <option value="value48">1976</option>
-                  <option value="value49">1975</option>
-                  <option value="value50">1974</option>
-                  <option value="value51">1973</option>
-                  <option value="value52">1972</option>
-                  <option value="value53">1971</option>
-                  <option value="value54">1970</option>
-                  <option value="value55">1969</option>
-                  <option value="value56">1968</option>
-                  <option value="value57">1967</option>
-                  <option value="value58">1966</option>
-                  <option value="value59">1965</option>
-                  <option value="value60">1964</option>
-                  <option value="value61">1963</option>
-                  <option value="value62">1962</option>
-                  <option value="value63">1961</option>
-                  <option value="value64">1960</option>
-                  <option value="value65">1959</option>
-                  <option value="value66">1958</option>
-                  <option value="value67">1957</option>
-                  <option value="value68">1956</option>
-                  <option value="value69">1955</option>
-                  <option value="value70">1954</option>
-                  <option value="value71">1953</option>
-                  <option value="value72">1952</option>
-                  <option value="value73">1951</option>
-                  <option value="value74">1950</option>
-                  <option value="value75">1949</option>
-                  <option value="value76">1948</option>
-                  <option value="value77">1947</option>
-                  <option value="value78">1946</option>
-                  <option value="value79">1945</option>
-                  <option value="value80">1944</option>
-                  <option value="value81">1943</option>
-                  <option value="value82">1942</option>
-                  <option value="value83">1941</option>
-                  <option value="value84">1940</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="tipo-de-piel-container">
-              <select name="piel" class="skin-styles skin-styles-text">
-                <option value="" disabled selected class="skin-styles-text">
-                  Tipo de piel
-                </option>
-                <option value="value1">Seca</option>
-                <option value="value1">Normal</option>
-                <option value="value1">Grasa</option>
-                <option value="value1">Mixta</option>
-                <option value="value1">Tendencia acneica</option>
-              </select>
-            </div>
-
-            <div class="tipo-de-piel-container">
-              <select name="piel" class="skin-styles skin-styles-text">
-                <option value="" disabled selected class="skin-styles-text">
-                  Marca
-                </option>
-                <option value="value1">La Roche Posay</option>
-                <option value="value1">Vichy</option>
-                <option value="value1">CeraVe</option>
-              </select>
-            </div>
-
-
-            <div class="phone-container">
-              <label for="telefono"></label>
-              <input
-                type="tel"
-                id="telefono"
-                name="phone-mobile"
-                placeholder="Telefono"
-                class="fst-italic"
-              />
-            </div>
-            <p class="switch-title">PREOCUPACIÓN POR LA PIEL</p>
-          </div>
-
-          <div class="preocupacion-por-la-piel-switches-container">
-            <div class="form-check form-switch form-check-inline">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-              />
-              <label
-                class="form-check-label"
-                for="flexSwitchCheckDefault"
-              ></label>
-              <p>Efectos del sol</p>
-            </div>
-            <div class="form-check form-switch form-check-inline">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-              />
-              <label
-                class="form-check-label"
-                for="flexSwitchCheckDefault"
-              ></label>
-              <p>Envejecimiento de la piel</p>
-            </div>
-
-            <div class="form-check form-switch form-check-inline">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-              />
-              <label
-                class="form-check-label"
-                for="flexSwitchCheckDefault"
-              ></label>
-              <p>Uniformidad de color</p>
-            </div>
-            <div class="form-check form-switch form-check-inline">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-              />
-              <label
-                class="form-check-label"
-                for="flexSwitchCheckDefault"
-              ></label>
-              <p>Imperfecciones en la piel</p>
-            </div>
-
-            <div class="form-check form-switch form-check-inline">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-              />
-              <label
-                class="form-check-label"
-                for="flexSwitchCheckDefault"
-              ></label>
-              <p>Resequedad</p>
-            </div>
-          </div>
-          <div class="form-check form-switch form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              role="switch"
-              id="flexSwitchCheckDefault"
-            />
-            <label
-              class="form-check-label"
-              for="flexSwitchCheckDefault"
-            ></label>
-            <p>
-              He leído y acepto las
-              <a class="text-privacidad" href="#">políticas de privacidad</a>
-              y
-              <a class="text-privacidad" href="#">términos y condiciones</a> y
-              declaro ser mayor de edad.
+    <div class="main-container">
+      <div class="contenedor-formulario">
+        <!--FORMULARIO-->
+        <form>
+          <!--TITULOS-->
+          <div class="container-title">
+            <p class="title fw-light">SUSCRIPCIÓN AL BOLETÍN</p>
+            <p class="title-medium-commet">
+              Completa este formulario para suscribirte al boletín de La
+              Roche-Posay
+            </p>
+            <p class="title-small-comment">
+              Los campos marcados con * son obligatorios
             </p>
           </div>
+          <div class="form-container">
+            <div class="input-container mitad1">
+              <label for="nombre"></label>
+              <input
+                type="text"
+                id="first-name"
+                name="nombre"
+                placeholder="Nombre*"
+                class="label-font fst-italic"
+              />
+            </div>
 
-          <div class="form-check form-switch form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              role="switch"
-              id="flexSwitchCheckDefault"
-            />
-            <label
-              class="form-check-label"
-              for="flexSwitchCheckDefault"
-            ></label>
-            <p>
-              Debes tener 16 años como mínimo para poder enviar tu solicitud
+            <div class="input-container mitad1">
+              <label for="apellido"></label>
+              <input
+                type="text"
+                id="apellido"
+                name="last-name"
+                placeholder="Apellido*"
+                class="label-font fst-italic"
+              />
+            </div>
+
+            <div class="input-container mitad2">
+              <label for="email"></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Correo electrónico*"
+                class="label-font fst-italic"
+              />
+            </div>
+
+            <div class="input-container mitad2">
+              <label for="confirmar-email"></label>
+              <input
+                type="email"
+                id="confirmar-email"
+                name="confirmar-email"
+                placeholder="Confirmar correo electrónico*"
+                class="label-font fst-italic"
+              />
+            </div>
+
+            <div class="contenedor-fecha-tipo-telefono">
+              <!--FECHA DE NACIMIENTO-->
+              <div class="date-container">
+                <p class="text-date">FECHA DE NACIMIENTO*</p>
+                <div>
+                  <select name="day-birthday" class="date-styles">
+                    <option value="" disabled selected>DD</option>
+                    <option value="value1">1</option>
+                    <option value="value2">2</option>
+                    <option value="value3">3</option>
+                    <option value="value4">4</option>
+                    <option value="value5">5</option>
+                    <option value="value6">6</option>
+                    <option value="value7">7</option>
+                    <option value="value8">8</option>
+                    <option value="value9">9</option>
+                    <option value="value10">10</option>
+                    <option value="value11">11</option>
+                    <option value="value12">12</option>
+                    <option value="value13">13</option>
+                    <option value="value14">14</option>
+                    <option value="value15">15</option>
+                    <option value="value16">16</option>
+                    <option value="value17">17</option>
+                    <option value="value18">18</option>
+                    <option value="value19">19</option>
+                    <option value="value20">20</option>
+                    <option value="value21">21</option>
+                    <option value="value22">22</option>
+                    <option value="value23">23</option>
+                    <option value="value24">24</option>
+                    <option value="value25">25</option>
+                    <option value="value26">26</option>
+                    <option value="value27">27</option>
+                    <option value="value28">28</option>
+                    <option value="value29">29</option>
+                    <option value="value30">30</option>
+                    <option value="value31">31</option>
+                  </select>
+                </div>
+                <div>
+                  <select name="month-birthday" class="date-styles">
+                    <option value="" disabled selected>MM</option>
+                    <option value="value1">1</option>
+                    <option value="value2">2</option>
+                    <option value="value4">4</option>
+                    <option value="value5">5</option>
+                    <option value="value1">6</option>
+                    <option value="value2">7</option>
+                    <option value="value4">8</option>
+                    <option value="value5">9</option>
+                    <option value="value2">10</option>
+                    <option value="value4">11</option>
+                    <option value="value5">12</option>
+                  </select>
+                </div>
+                <div>
+                  <select name="year-birthday" class="date-styles">
+                    <option value="" disabled selected>AAAA</option>
+                    <option value="value1">2023</option>
+                    <option value="value2">2022</option>
+                    <option value="value3">2021</option>
+                    <option value="value4">2020</option>
+                    <option value="value5">2019</option>
+                    <option value="value6">2018</option>
+                    <option value="value7">2017</option>
+                    <option value="value8">2016</option>
+                    <option value="value9">2015</option>
+                    <option value="value10">2014</option>
+                    <option value="value11">2013</option>
+                    <option value="value12">2012</option>
+                    <option value="value13">2011</option>
+                    <option value="value14">2010</option>
+                    <option value="value15">2009</option>
+                    <option value="value16">2008</option>
+                    <option value="value17">2007</option>
+                    <option value="value18">2006</option>
+                    <option value="value19">2005</option>
+                    <option value="value20">2004</option>
+                    <option value="value21">2003</option>
+                    <option value="value22">2002</option>
+                    <option value="value23">2001</option>
+                    <option value="value24">2000</option>
+                    <option value="value25">1999</option>
+                    <option value="value26">1998</option>
+                    <option value="value27">1997</option>
+                    <option value="value28">1996</option>
+                    <option value="value29">1995</option>
+                    <option value="value30">1994</option>
+                    <option value="value31">1993</option>
+                    <option value="value32">1992</option>
+                    <option value="value33">1991</option>
+                    <option value="value34">1990</option>
+                    <option value="value35">1989</option>
+                    <option value="value36">1988</option>
+                    <option value="value37">1987</option>
+                    <option value="value38">1986</option>
+                    <option value="value39">1985</option>
+                    <option value="value40">1984</option>
+                    <option value="value41">1983</option>
+                    <option value="value42">1982</option>
+                    <option value="value43">1981</option>
+                    <option value="value44">1980</option>
+                    <option value="value45">1979</option>
+                    <option value="value46">1978</option>
+                    <option value="value47">1977</option>
+                    <option value="value48">1976</option>
+                    <option value="value49">1975</option>
+                    <option value="value50">1974</option>
+                    <option value="value51">1973</option>
+                    <option value="value52">1972</option>
+                    <option value="value53">1971</option>
+                    <option value="value54">1970</option>
+                    <option value="value55">1969</option>
+                    <option value="value56">1968</option>
+                    <option value="value57">1967</option>
+                    <option value="value58">1966</option>
+                    <option value="value59">1965</option>
+                    <option value="value60">1964</option>
+                    <option value="value61">1963</option>
+                    <option value="value62">1962</option>
+                    <option value="value63">1961</option>
+                    <option value="value64">1960</option>
+                    <option value="value65">1959</option>
+                    <option value="value66">1958</option>
+                    <option value="value67">1957</option>
+                    <option value="value68">1956</option>
+                    <option value="value69">1955</option>
+                    <option value="value70">1954</option>
+                    <option value="value71">1953</option>
+                    <option value="value72">1952</option>
+                    <option value="value73">1951</option>
+                    <option value="value74">1950</option>
+                    <option value="value75">1949</option>
+                    <option value="value76">1948</option>
+                    <option value="value77">1947</option>
+                    <option value="value78">1946</option>
+                    <option value="value79">1945</option>
+                    <option value="value80">1944</option>
+                    <option value="value81">1943</option>
+                    <option value="value82">1942</option>
+                    <option value="value83">1941</option>
+                    <option value="value84">1940</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="tipo-de-piel-container">
+                <select name="piel" class="skin-styles skin-styles-text">
+                  <option value="" disabled selected class="skin-styles-text">
+                    Tipo de piel
+                  </option>
+                  <option value="value1">Seca</option>
+                  <option value="value1">Normal</option>
+                  <option value="value1">Grasa</option>
+                  <option value="value1">Mixta</option>
+                  <option value="value1">Tendencia acneica</option>
+                </select>
+              </div>
+
+              <div class="tipo-de-piel-container">
+                <select name="piel" class="skin-styles skin-styles-text">
+                  <option value="" disabled selected class="skin-styles-text">
+                    Marca
+                  </option>
+                  <option value="value1">La Roche Posay</option>
+                  <option value="value1">Vichy</option>
+                  <option value="value1">CeraVe</option>
+                </select>
+              </div>
+
+              <div class="phone-container">
+                <label for="telefono"></label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="phone-mobile"
+                  placeholder="Telefono"
+                  class="fst-italic"
+                />
+              </div>
+              <p class="switch-title">PREOCUPACIÓN POR LA PIEL</p>
+            </div>
+
+            <div class="preocupacion-por-la-piel-switches-container">
+              <div class="form-check form-switch form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                />
+                <label
+                  class="form-check-label"
+                  for="flexSwitchCheckDefault"
+                ></label>
+                <p>Efectos del sol</p>
+              </div>
+              <div class="form-check form-switch form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                />
+                <label
+                  class="form-check-label"
+                  for="flexSwitchCheckDefault"
+                ></label>
+                <p>Envejecimiento de la piel</p>
+              </div>
+
+              <div class="form-check form-switch form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                />
+                <label
+                  class="form-check-label"
+                  for="flexSwitchCheckDefault"
+                ></label>
+                <p>Uniformidad de color</p>
+              </div>
+              <div class="form-check form-switch form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                />
+                <label
+                  class="form-check-label"
+                  for="flexSwitchCheckDefault"
+                ></label>
+                <p>Imperfecciones en la piel</p>
+              </div>
+
+              <div class="form-check form-switch form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                />
+                <label
+                  class="form-check-label"
+                  for="flexSwitchCheckDefault"
+                ></label>
+                <p>Resequedad</p>
+              </div>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+              />
+              <label
+                class="form-check-label"
+                for="flexSwitchCheckDefault"
+              ></label>
+              <p>
+                He leído y acepto las
+                <a class="text-privacidad" href="#">políticas de privacidad</a>
+                y
+                <a class="text-privacidad" href="#">términos y condiciones</a> y
+                declaro ser mayor de edad.
+              </p>
+            </div>
+
+            <div class="form-check form-switch form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+              />
+              <label
+                class="form-check-label"
+                for="flexSwitchCheckDefault"
+              ></label>
+              <p>
+                Debes tener 16 años como mínimo para poder enviar tu solicitud
+              </p>
+            </div>
+
+            <p class="container-md phrase-container">
+              La Roche Posay y otras empresas de confianza usarán tus datos
+              personales para administrar tu consulta o para responder tus
+              preguntas, y para fines analíticos y de investigación de mercado.
+              Para más información sobre el uso que le damos a tus datos
+              personales, consulta nuestra política de privacidad
             </p>
+
+            <p class="container-md phrase-container-pequeno">
+              La Roche Posay forma parte de L’Oréal Cosmética Activa
+            </p>
+
+            <a href="#" class="ov-btn-slide-left">SUSCRIBETE AL BOLETIN</a>
           </div>
-
-          <p class="container-md phrase-container">
-            La Roche Posay y otras empresas de confianza usarán tus datos
-            personales para administrar tu consulta o para responder tus
-            preguntas, y para fines analíticos y de investigación de mercado.
-            Para más información sobre el uso que le damos a tus datos
-            personales, consulta nuestra política de privacidad
-          </p>
-
-          <p class="container-md phrase-container-pequeno">
-            La Roche Posay forma parte de L’Oréal Cosmética Activa
-          </p>
-
-          <a href="#" class="ov-btn-slide-left">SUSCRIBETE AL BOLETIN</a>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
 
     <script
