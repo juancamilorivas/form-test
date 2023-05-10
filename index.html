@@ -282,7 +282,11 @@
     </style>
   </head>
   <body>
-    <img class="image-banner" src="./public/Banner.jpg" alt="texto_alternativo" />
+    <img
+      class="image-banner"
+      src="./public/Banner.jpg"
+      alt="texto_alternativo"
+    />
 
     <div class="main-container">
       <div class="contenedor-formulario">
@@ -292,7 +296,8 @@
           <div class="container-title">
             <p class="title fw-light">SUSCRIPCIÓN AL BOLETÍN</p>
             <p class="title-medium-commet">
-              Completa este formulario para conocer del proyecto Ecobot y nuestras marcas L'Oréal
+              Completa este formulario para conocer del proyecto Ecobot y
+              nuestras marcas L'Oréal
             </p>
             <p class="title-small-comment">
               Los campos marcados con * son obligatorios
@@ -352,7 +357,8 @@
                 <div>
                   <select name="day-birthday" class="date-styles">
                     <option value="" disabled selected>DD</option>
-                    <<option value="1">1</option>
+                    <
+                    <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -382,7 +388,7 @@
                     <option value="28">28</option>
                     <option value="29">29</option>
                     <option value="30">30</option>
-                    <option value="31">31</option>                    
+                    <option value="31">31</option>
                   </select>
                 </div>
                 <div>
@@ -499,11 +505,11 @@
                   <option value="" disabled selected class="skin-styles-text">
                     Tipo de piel
                   </option>
-                  <option value="dehydration">Seca</option>
+                  <option value="Dehydration">Seca</option>
                   <option value="normal">Normal</option>
                   <option value="oily">Grasa</option>
                   <option value="mix">Mixta</option>
-                  <option value="acne">Tendencia acneica</option>
+                  <option value="Lack of">Tendencia acneica</option>
                 </select>
               </div>
 
@@ -524,8 +530,10 @@
                   type="tel"
                   id="telefono"
                   name="phone-mobile"
-                  placeholder="Telefono"
+                  placeholder="Telefono*"
                   class="fst-italic"
+                  pattern="[0-9]*"
+                  required
                 />
               </div>
               <p class="switch-title">PREOCUPACIÓN POR LA PIEL</p>
@@ -613,10 +621,18 @@
               ></label>
               <p>
                 He leído y acepto las
-                <a class="text-privacidad" href="https://www.loreal.com/en/colombia/pages/group/privacy-policy-colombia/">políticas de privacidad</a>
+                <a
+                  class="text-privacidad"
+                  href="https://www.loreal.com/en/colombia/pages/group/privacy-policy-colombia/"
+                  >políticas de privacidad</a
+                >
                 y
-                <a class="text-privacidad" href="https://www.laroche-posay.co/event/terminos-y-condiciones">términos y condiciones</a> y
-                declaro ser mayor de edad.
+                <a
+                  class="text-privacidad"
+                  href="https://www.laroche-posay.co/event/terminos-y-condiciones"
+                  >términos y condiciones</a
+                >
+                y declaro ser mayor de edad.
               </p>
             </div>
 
@@ -659,6 +675,24 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      var telefono = document.getElementById("telefono");
+      telefono.addEventListener("keydown", function (event) {
+        // Permitir tecla de retroceso
+        if (event.keyCode === 8) {
+          return;
+        }
+        // Bloquear otros caracteres no numéricos
+        if (!/[0-9]/.test(event.key)) {
+          event.preventDefault();
+          alert("Solo se permiten números en este campo.");
+        }
+        else {
+          return
+        }
+      });
+    </script>
 
     <script>
       // Seleccionar el input del correo electrónico y el contenedor del mensaje de error
