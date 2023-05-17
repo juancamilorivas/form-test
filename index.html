@@ -85,22 +85,22 @@
 
       .name-container {
         display: flex;
+        flex-direction: column;
+      }
+
+      .name-and-last-name-container {
+        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-      }
-
-      .mitad1 {
-        flex-basis: 50%;
-        margin-bottom: 1rem;
-      }
-
-      .mitad2 {
-        flex-basis: 50%;
-        margin-top: 1rem;
+        justify-content: flex-start;
       }
 
       .input-container {
-        position: relative;
-        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-right: 60px;
+        margin-bottom: 16px;
       }
 
       label {
@@ -320,52 +320,60 @@
           </div>
           <div class="form-container">
             <div class="name-container">
-              <div class="input-container mitad1">
-                <label for="nombre"></label>
-                <input
-                  type="text"
-                  id="first-name"
-                  name="first-name"
-                  placeholder="Nombre*"
-                  class="label-font fst-italic"
-                  required
-                />
+              <div class="name-and-last-name-container">
+                <!--first-name-->
+                <div class="input-container">
+                  <label for="nombre"></label>
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    placeholder="Nombre*"
+                    class="label-font fst-italic"
+                    required
+                  />
+                </div>
+
+                <!--last-name-->
+                <div class="input-container">
+                  <label for="apellido"></label>
+                  <input
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    placeholder="Apellido*"
+                    class="label-font fst-italic"
+                    required
+                  />
+                </div>
               </div>
 
-              <div class="input-container mitad1">
-                <label for="apellido"></label>
-                <input
-                  type="text"
-                  id="last-name"
-                  name="last-name"
-                  placeholder="Apellido*"
-                  class="label-font fst-italic"
-                  required
-                />
-              </div>
+              <div class="name-and-last-name-container">
+                <!--Email-->
+                <div class="input-container">
+                  <label for="email"></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Correo electrónico*"
+                    class="label-font fst-italic"
+                    required
+                  />
+                </div>
 
-              <div class="input-container mitad2">
-                <label for="email"></label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Correo electrónico*"
-                  class="label-font fst-italic"
-                  required
-                />
-              </div>
-
-              <div class="input-container mitad2">
-                <label for="confirmar-email"></label>
-                <input
-                  type="email"
-                  id="confirmar-email"
-                  name="confirmar-email"
-                  placeholder="Confirmar correo*"
-                  class="label-font fst-italic"
-                  required
-                />
+                <!--Confirm mail-->
+                <div class="input-container">
+                  <label for="confirmar-email"></label>
+                  <input
+                    type="email"
+                    id="confirmar-email"
+                    name="confirmar-email"
+                    placeholder="Confirmar correo*"
+                    class="label-font fst-italic"
+                    required
+                  />
+                </div>
               </div>
             </div>
 
@@ -518,7 +526,6 @@
               </div>
 
               <div>
-                <p class="switch-title">Tipo de piel</p>
                 <div class="tipo-de-piel-container">
                   <select name="SKIN_TYPE" class="skin-styles skin-styles-text">
                     <option value="" disabled selected class="skin-styles-text">
@@ -533,7 +540,7 @@
                 </div>
 
                 <div class="tipo-de-piel-container">
-                  <select name="piel" class="skin-styles skin-styles-text">
+                  <select name="marca" class="skin-styles skin-styles-text">
                     <option value="" disabled selected class="skin-styles-text">
                       Marca
                     </option>
@@ -671,7 +678,6 @@
                     href="https://www.laroche-posay.co/event/terminos-y-condiciones"
                     >términos y condiciones</a
                   >
-                  y declaro ser mayor de edad.
                 </p>
               </div>
             </div>
@@ -721,18 +727,17 @@
 
     <script>
       var telefono = document.getElementById("telefono");
-      
+
       telefono.addEventListener("input", function (event) {
         var inputValue = telefono.value;
-        var numericValue = inputValue.replace(/[^0-9]/g, ''); // Eliminar caracteres no numéricos
-        
+        var numericValue = inputValue.replace(/[^0-9]/g, ""); // Eliminar caracteres no numéricos
+
         if (inputValue !== numericValue) {
           telefono.value = numericValue; // Actualizar el valor del campo de entrada sin caracteres no numéricos
           alert("Solo se permiten números en este campo.");
         }
       });
     </script>
-    
 
     <script>
       // Seleccionar el input del correo electrónico y el contenedor del mensaje de error
@@ -750,14 +755,14 @@
             "El correo electrónico debe tener menos de 35 caracteres y no puede estar vacío";
           emailError.style.color = "red";
           emailError.style.fontSize = "14px";
+          emailError.style.maxWidth = "250px";
           return false;
         } else if (!/\S+@\S+\.\S+/.test(email)) {
           emailInput.classList.add("invalid");
           emailError.textContent = "El correo electrónico no es correcto";
           emailError.style.color = "red";
           emailError.style.fontSize = "14px";
-          emailError.style.display = "flex";
-          emailError.style.paddingRight = "35px";
+          emailError.style.maxWidth = "250px";
 
           return false;
         } else {
@@ -802,7 +807,7 @@
           emailError.style.color = "red";
           emailError.style.fontSize = "14px";
           emailError.style.display = "flex";
-          emailError.style.flexWrap = "wrap";
+          emailError.style.flexWrap = "nowrap";
           emailError.style.paddingRight = "35px";
 
           return false;
