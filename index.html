@@ -721,20 +721,18 @@
 
     <script>
       var telefono = document.getElementById("telefono");
-      telefono.addEventListener("keydown", function (event) {
-        // Permitir tecla de retroceso
-        if (event.keyCode === 8) {
-          return;
-        }
-        // Bloquear otros caracteres no numéricos
-        if (!/[0-9]/.test(event.key)) {
-          event.preventDefault();
+      
+      telefono.addEventListener("input", function (event) {
+        var inputValue = telefono.value;
+        var numericValue = inputValue.replace(/[^0-9]/g, ''); // Eliminar caracteres no numéricos
+        
+        if (inputValue !== numericValue) {
+          telefono.value = numericValue; // Actualizar el valor del campo de entrada sin caracteres no numéricos
           alert("Solo se permiten números en este campo.");
-        } else {
-          return;
         }
       });
     </script>
+    
 
     <script>
       // Seleccionar el input del correo electrónico y el contenedor del mensaje de error
@@ -759,7 +757,6 @@
           emailError.style.color = "red";
           emailError.style.fontSize = "14px";
           emailError.style.display = "flex";
-          emailError.style.flexWrap = "wrap";
           emailError.style.paddingRight = "35px";
 
           return false;
