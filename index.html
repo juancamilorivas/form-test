@@ -381,7 +381,7 @@
               <div class="date-container">
                 <p class="text-date">FECHA DE NACIMIENTO*</p>
                 <div>
-                  <select name="birthday" class="date-styles">
+                  <select name="birthday" class="date-styles" required>
                     <option value="" disabled selected>DD</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -417,7 +417,7 @@
                   </select>
                 </div>
                 <div>
-                  <select name="month-birthday" class="date-styles">
+                  <select name="month-birthday" class="date-styles" required>
                     <option value="" disabled selected>MM</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -434,7 +434,7 @@
                   </select>
                 </div>
                 <div>
-                  <select name="year-birthday" class="date-styles">
+                  <select name="year-birthday" class="date-styles" required>
                     <option value="" disabled selected>AAAA</option>
                     <option value="2023">2023</option>
                     <option value="2022">2022</option>
@@ -526,7 +526,11 @@
 
               <div>
                 <div class="tipo-de-piel-container">
-                  <select name="SKIN_TYPE" class="skin-styles skin-styles-text">
+                  <select
+                    name="SKIN_TYPE"
+                    class="skin-styles skin-styles-text"
+                    required
+                  >
                     <option value="" disabled selected class="skin-styles-text">
                       Tipo de piel
                     </option>
@@ -539,7 +543,11 @@
                 </div>
 
                 <div class="tipo-de-piel-container">
-                  <select name="Brand" class="skin-styles skin-styles-text">
+                  <select
+                    name="Brand"
+                    class="skin-styles skin-styles-text"
+                    required
+                  >
                     <option value="" disabled selected class="skin-styles-text">
                       Marca
                     </option>
@@ -658,6 +666,7 @@
                   type="checkbox"
                   role="switch"
                   id="flexSwitchCheckDefault"
+                  name="Opt_in"
                   required
                 />
                 <label
@@ -791,7 +800,7 @@
       emailInput.parentNode.appendChild(emailError);
 
       // Definir una función para validar el correo electrónico
-      function validarEmail() {
+      function validarEmail1() {
         const email = emailInput.value.trim();
         if (!email) {
           emailInput.classList.add("invalid");
@@ -808,7 +817,6 @@
           emailError.style.display = "flex";
           emailError.style.flexWrap = "nowrap";
           emailError.style.paddingRight = "35px";
-
           return false;
         } else {
           emailInput.classList.remove("invalid");
@@ -816,15 +824,14 @@
           return true;
         }
       }
-
       // Agregar un evento para validar el correo electrónico cuando el usuario cambie el valor del input
-      emailInput.addEventListener("input", validarEmail);
+      emailInput.addEventListener("input", validarEmail1);
 
       // Agregar un evento para validar el correo electrónico cuando el usuario envíe el formulario
       document
         .querySelector("form")
         .addEventListener("submit", function (event) {
-          if (!validarEmail()) {
+          if (!validarEmail1()) {
             event.preventDefault();
           }
         });
@@ -832,18 +839,20 @@
       const confirmarEmail = document.getElementById("confirmar-email");
       const error = document.createElement("p");
 
-      function validarEmail() {
+      function validarEmail2() {
         if (email.value !== confirmarEmail.value) {
           error.textContent = "Error: los correos electrónicos no coinciden.";
           error.style.color = "red";
           confirmarEmail.parentNode.appendChild(error);
+          return false;
         } else if (error.parentNode === confirmarEmail.parentNode) {
           confirmarEmail.parentNode.removeChild(error);
         }
+        return true;
       }
 
-      email.addEventListener("input", validarEmail);
-      confirmarEmail.addEventListener("input", validarEmail);
+      email.addEventListener("input", validarEmail2);
+      confirmarEmail.addEventListener("input", validarEmail2);
     </script>
   </body>
 </html>
